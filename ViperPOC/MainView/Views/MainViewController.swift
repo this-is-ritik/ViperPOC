@@ -24,10 +24,9 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.presenter?.fetchDataFromApi()
         self.setupView()
         self.registerCells()
-        self.collectionView.reloadData()
+        self.presenter?.fetchDataFromApi()
     }
     func registerCells() {
         let nib = UINib(nibName: "CustomCVC", bundle: .main)

@@ -20,8 +20,8 @@ class ViewController: UIViewController {
 
 
     @IBAction func ctaTapped(_ sender: Any) {
-        let vc = MainRouter.createMainVC()
-        self.navigationController?.pushViewController(vc, animated: true)
+        let vc = MainRouter()
+        vc.start(view: self)
     }
 }
 
